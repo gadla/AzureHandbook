@@ -14,6 +14,8 @@ Whether you're looking to enhance your organization's password security or just 
 
 # How Azure Active Directory Password Protection Works
 
+
+
 Azure Active Directory Password Protection enhances the standard Active Directory complexity rules by including a list of globally banned passwords. This list contains the most commonly used weak passwords and their variants, which are often targeted by attackers. These are the passwords that users are prohibited from selecting when they change or reset their password in Azure AD or Windows Server Active Directory (when Azure AD Password Protection is enabled).
 
 Azure AD Password Protection uses two types of banned password lists:
@@ -34,6 +36,25 @@ Through this combination of globally banned passwords, customizable lists, and o
 
 <br>
 <br>
+
+# What happens when a user changes his password?
+
+<img src="Files/Azure-ad-password-protection.png" alt="PowerShell Advanced Scripting Techniques" s />
+
+<br>
+
+
+1. **User sends a password change request:** This is correct. The user can send a password change request to any domain controller in the domain.
+
+2. **Domain Controller validates the password:** The Domain Controller will indeed validate the new password against the password policy, which is usually defined in the Default Domain Policy.
+
+3. **Domain Controller passes the password to the password filter:** If Azure AD Password Protection (which includes a password filter DLL component) is installed and registered on the Domain Controllers, then yes, the Domain Controller will pass the new password to the password filter. This password filter will validate the password based on a list of banned passwords that are defined in Azure AD. The Domain Controller **does not** need to be connected to the Internet to perform this validation. The password filter DLL is installed on the Domain Controller and will perform the validation locally.
+
+4. **Password is written to the NTDS.DIT database:** If the new password passes all of the checks, then it will be written to the NTDS.DIT database on the Domain Controller. The NTDS.DIT file is the Active Directory database and stores all the information about users, groups, computers, and more.
+
+5. **Password is synchronized through the forest:** The new password is then replicated to all other Domain Controllers in the Active Directory forest through the standard Active Directory replication mechanisms. In a multi-domain forest, this includes replication to Domain Controllers in other domains.
+
+Remember that the exact process can vary slightly depending on the specifics of your environment and your configuration. For example, if you have Read-Only Domain Controllers (RODCs) or if you're using features like Password Replication Policy (PRP), then the process might be a bit different. But in a standard environment with all Read-Write Domain Controllers (RWDCs), the process you described is correct.
 
 # Pre-requisites for Azure AD Password Protection
 
