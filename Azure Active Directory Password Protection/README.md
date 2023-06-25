@@ -70,6 +70,8 @@ Before you begin the process of setting up Azure Active Directory Password Prote
 
 5. **Azure Active Directory P1 or P2 license**: Azure AD Password Protection is a premium feature and requires Azure Active Directory P1 or P2 license.
 
+6. **Read Only Domain Controllers**: If you have Read Only Domain Controllers (RODCs) in your environment, you will need to ensure that the Azure AD Password Protection Proxy Agent is installed on at least one RWDC in each domain that has an RODC. This is because the Azure AD Password Protection DC Agent cannot be installed on an RODC.
+
 Please note that these are the basic requirements for setting up Azure AD Password Protection. Depending on your specific network setup and security configurations, additional considerations might need to be made. For instance, if your Azure AD Password Protection Proxy is behind an HTTP proxy, additional configuration steps will be necessary.
 
 <br>
