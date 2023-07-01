@@ -56,6 +56,8 @@ Through this combination of globally banned passwords, customizable lists, and o
 
 Remember that the exact process can vary slightly depending on the specifics of your environment and your configuration. For example, if you have Read-Only Domain Controllers (RODCs) or if you're using features like Password Replication Policy (PRP), then the process might be a bit different. But in a standard environment with all Read-Write Domain Controllers (RWDCs), the process you described is correct.
 
+<br>
+
 # Pre-requisites for Azure AD Password Protection
 
 Before you begin the process of setting up Azure Active Directory Password Protection, there are a few requirements that you need to ensure are met in your environment. 
