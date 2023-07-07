@@ -39,7 +39,7 @@ Through this combination of globally banned passwords, customizable lists, and o
 
 # What happens when a user changes his password?
 
-<img src="Files/Azure-ad-password-protection.png" alt="PowerShell Advanced Scripting Techniques" s />
+<img src="./Files/azure-ad-password-protection.png" alt="PowerShell Advanced Scripting Techniques" s />
 
 <br>
 
