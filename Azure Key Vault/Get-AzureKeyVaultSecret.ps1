@@ -66,3 +66,9 @@
         Write-Output $secret.SecretValue
     }
 }
+
+
+#Use this command line inorder to get the secret in removed state
+Get-AzKeyVaultSecret -VaultName 'YourVaultName' -InRemovedState
+#Use this command line inorder to recover the secret
+undo-azkeyvaultsecretRemoval -VaultName 'YourVaultName' -Name 'YourDeletedSecretName'
