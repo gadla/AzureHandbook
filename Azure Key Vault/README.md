@@ -1,6 +1,7 @@
 ﻿# Unlocking the Power of Azure Key Vault: Securing Your Secrets in the Cloud
 
 ## Table of Contents
+
 - [Unlocking the Power of Azure Key Vault: Securing Your Secrets in the Cloud](#unlocking-the-power-of-azure-key-vault-securing-your-secrets-in-the-cloud)
   - [Table of Contents](#table-of-contents)
   - [Introduction ](#introduction-)
