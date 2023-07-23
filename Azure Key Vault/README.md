@@ -2,16 +2,14 @@
 
 ## Table of Contents
 
-- [Unlocking the Power of Azure Key Vault: Securing Your Secrets in the Cloud](#unlocking-the-power-of-azure-key-vault-securing-your-secrets-in-the-cloud)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction ](#introduction-)
-  - [What is Azure Key Vault? ](#what-is-azure-key-vault-)
-  - [Use Cases of Azure Key Vault ](#use-cases-of-azure-key-vault-)
-  - [Azure Key Vault Access: Access Policies VS RBAC ](#azure-key-vault-access-access-policies-vs-rbac-)
-  - [Comparing Software-Protected and HSM-Protected Keys in Azure Key Vault ](#comparing-software-protected-and-hsm-protected-keys-in-azure-key-vault-)
-  - [Soft Delete vs Purge Protection ](#soft-delete-vs-purge-protection-)
-  - [Azure Key Vault Pricing ](#azure-key-vault-pricing-)
-  - [Conclusion ](#conclusion-)
+- [Introduction](#introduction)
+- [What is Azure Key Vault](#what-is-azure-key-vault)
+- [Use Cases of Azure Key Vault](#use-cases-of-azure-key-vault)
+- [Azure Key Vault Access: Access Policies VS RBAC](#azure-key-vault-access-access-policies-vs-rbac)
+- [Comparing Software-Protected and HSM-Protected Keys in Azure Key Vault](#comparing-software-protected-and-hsm-protected-keys-in-azure-key-vault)
+- [Soft Delete vs Purge Protection](#soft-delete-vs-purge-protection)
+- [Azure Key Vault Pricing](#azure-key-vault-pricing)
+- [Conclusion](#conclusion)
 ## Introduction <a name="introduction"></a>
 
 The digital landscape continues to grow and evolve, leading to an exponential increase in data generation. This includes sensitive data like shared credentials and service account passwords. The need for secure management of this information is paramount in today's digital age. All too often, organizations resort to storing such data in spreadsheets, text files, or shared documents, which are inherently insecure and prone to unauthorized access, misuse, and potential exploitation.
